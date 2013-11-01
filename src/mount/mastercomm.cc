@@ -2294,9 +2294,6 @@ uint8_t fs_setxattr(uint32_t inode,uint8_t opened,uint32_t uid,uint32_t gid,uint
 	uint32_t i;
 	uint8_t ret;
 	threc *rec = fs_get_my_threc();
-	if (masterversion<0x010700) {
-		return ERROR_ENOTSUP;
-	}
 	if (mode>=MFS_XATTR_REMOVE) {
 		return ERROR_EINVAL;
 	}

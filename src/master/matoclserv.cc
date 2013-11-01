@@ -3529,13 +3529,13 @@ void matoclserv_gotpacket(matoclserventry *eptr,uint32_t type,const uint8_t *dat
 			case CLTOMA_FUSE_SETEATTR:
 				matoclserv_fuse_seteattr(eptr,data,length);
 				break;
-/* do not use in version before 1.7.x */
 			case CLTOMA_FUSE_GETXATTR:
 				matoclserv_fuse_getxattr(eptr,data,length);
 				break;
 			case CLTOMA_FUSE_SETXATTR:
 				matoclserv_fuse_setxattr(eptr,data,length);
 				break;
+/* do not use in version before 1.7.x */
 			case CLTOMA_FUSE_QUOTACONTROL:
 				matoclserv_fuse_quotacontrol(eptr,data,length);
 				break;
